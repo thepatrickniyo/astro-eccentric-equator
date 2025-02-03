@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import H1 from '../components/H1.astro'
+import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Starter">
-	<Welcome />
+<Layout title="Thythm Nation">
+    <div class="bg-white">
+        <Main>
+            <div class="relative overflow-hidden py-16 lg:py-24">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <H1 text="Thythm Nation" />
+                            
+                            <p class="mt-6 text-xl text-gray-600 leading-8">
+                                Dive into a world of rhythm, creativity, and inspiration. 
+                                Thythm Nation is your destination for cutting-edge insights, 
+                                personal stories, and innovative perspectives.
+                            </p>
+                            
+                            <div class="flex space-x-4 mt-8">
+                                <a 
+                                    href="/blog" 
+                                    class="inline-block px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg shadow-md hover:bg-teal-700 transition-colors"
+                                >
+                                    Explore Blog
+                                </a>
+                                <a 
+                                    href="/about" 
+                                    class="inline-block px-6 py-3 border-2 border-teal-600 text-teal-600 font-semibold rounded-lg hover:bg-teal-50 transition-colors"
+                                >
+                                    About Us
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="hidden lg:block relative">
+                            <div class="aspect-w-16 aspect-h-10 rounded-2xl overflow-hidden shadow-2xl">
+                                <img 
+                                    src={'band.jpg'} 
+                                    alt="Thythm Nation Hero" 
+                                    class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-teal-500/20 rounded-full blur-2xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </Main>
+    </div>
 </Layout>
